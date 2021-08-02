@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.537 15.371">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8dd2d;
+        stroke: #f8dd2d;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="mail" transform="translate(0.5 0.5)">
+    <g id="Layer_1" data-name="Layer 1" transform="translate(0 0)">
+      <path id="Path_7" data-name="Path 7" class="cls-1" d="M19.318,14.867H2.22A1.675,1.675,0,0,1,.5,13.246V2.12A1.675,1.675,0,0,1,2.22.5h17.1a1.675,1.675,0,0,1,1.72,1.621V13.246A1.675,1.675,0,0,1,19.318,14.867ZM2.22.724a1.45,1.45,0,0,0-1.5,1.4V13.246a1.45,1.45,0,0,0,1.5,1.4h17.1a1.45,1.45,0,0,0,1.491-1.405V2.12a1.45,1.45,0,0,0-1.491-1.4Z" transform="translate(-0.5 -0.499)"/>
+      <path id="Path_8" data-name="Path 8" class="cls-1" d="M10.813,9.032,1.86,1.682l.153-.162,8.953,7.346Z" transform="translate(-1.249 -1.061)"/>
+      <path id="Path_9" data-name="Path 9" class="cls-1" d="M21.949,9.031l-.139-.175L32.137,1.51l.139.175Z" transform="translate(-12.242 -1.056)"/>
+    </g>
+  </g>
+</svg>

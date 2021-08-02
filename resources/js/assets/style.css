@@ -1,0 +1,593 @@
+/* ------css variables------- */
+:root {
+    --primary-color: #0b7074;
+    --secondary-color: #84f4f8;
+    --highlight-color: #ecc730;
+    --title-text-color: #4a4a4a;
+    --img-title-color: #ffffff;
+    --content-text-color: #666666;
+    /* header-live-radio */
+    --radio-outer-gradient: linear-gradient(to left,
+            rgb(48, 163, 167),
+            rgb(81, 205, 209));
+    --radio-inner-gradient: linear-gradient(to right, #0b7074, rgb(3, 155, 160));
+    --radio-text: rgb(236, 233, 48);
+    /* header-navigation */
+    --up-nav-color: var(--primary-color);
+    --up-nav-hover-color: rgb(205, 253, 255);
+    --down-nav-color: #fff;
+    /* tag */
+    --tag-gradient: linear-gradient(125deg,
+            rgb(230, 179, 11) 0%,
+            rgb(230, 179, 11) 50%,
+            rgb(196, 151, 4) 50%);
+    --tag-text-color: #ffffff;
+    /* live-radio */
+    --radio-bg-color: rgba(48, 173, 177, 0.95);
+    --radio-content-bg-color: #ffffff;
+    /* side-navigation */
+    --sidenav-bg: rgb(230, 255, 255);
+    --nav-bg-gradient: linear-gradient(to left,
+            #0b7074 0%,
+            #0b7074 50%,
+            var(--sidenav-bg) 50%);
+    /* footer */
+    --footer-highlight-color: #ffffff;
+    --footer-bg-color: #009095;
+    --footer-content-color: #ffffff;
+    --social-bg-color: #ffffff;
+    /* button */
+    --btn-gradient: linear-gradient(125deg,
+            rgb(13, 130, 134) 0%,
+            rgb(13, 130, 134) 50%,
+            #0b7074 50%);
+    /* right-side */
+    --countdown-color: rgb(166, 245, 245);
+    --onair-out-color: rgb(51, 182, 187);
+
+    --pagination-color: #02b3ba;
+    --search-color: #ffffff;
+}
+
+/* -----globle css----- */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    box-sizing: border-box;
+}
+
+/* -----all page----- */
+.page-wraper {
+    margin: 0 4.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-side {
+    width: 71%;
+    padding-bottom: 2rem;
+}
+
+.right-side {
+    width: 26%;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* -----secondary----- */
+.icon {
+    width: 1.5rem;
+}
+
+.margin-top1 {
+    margin-top: 1rem;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.padding-top1 {
+    padding-top: 1rem;
+}
+
+.img-link {
+    height: 100%;
+    width: 100%;
+}
+
+/* -----dropdown------ */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    left: -4rem;
+    top: 90%;
+    border-top: 5px solid var(--highlight-color);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+    width: 16rem;
+    text-align: center;
+    box-shadow: 0 2px 3px #7e7e7e;
+    z-index: 100;
+}
+
+.dropdown-link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    color: var(--primary-color);
+}
+
+.dropdown-link:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dropdown-link:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+/* -----dropdown arrow----- */
+.down-arrow {
+    display: inline-block;
+    margin-left: 0.7rem;
+    transform: rotate(90deg);
+    font-size: 1.3rem;
+}
+
+/* -----card----- */
+.card {
+    padding: 2.5rem;
+    box-shadow: 0 0 10px #999999;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+/* -----highlight----- */
+.highlight {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+    display: inline-block;
+    line-height: 1.3;
+    padding: 0.1rem 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid var(--highlight-color);
+}
+
+/* -----card-img-background----- */
+.card-img-wrapper {
+    position: relative;
+}
+
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.card-img:hover .card__backimg {
+    transform: scale(1.1);
+}
+
+.card-img:hover .you-video {
+    transform: scale(1.1);
+}
+
+.card__backimg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+}
+
+.card-img__title {
+    position: absolute;
+    color: var(--img-title-color);
+    padding: 0 2.5rem;
+    z-index: 2;
+}
+
+/* -----image + title----- */
+.img-holder {
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-holder:hover .img {
+    transform: scale(1.1);
+}
+
+.img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--title-text-color) !important;
+    cursor: pointer;
+}
+
+.owl-dot.active span {
+    background-color: #008085 !important;
+}
+
+.title:hover {
+    color: var(--primary-color) !important;
+}
+
+.card-img__tag {
+    position: absolute;
+    bottom: 1.5rem;
+    margin-left: 2.5rem;
+    z-index: 2;
+}
+
+.card__desc {
+    color: var(--content-text-color);
+    padding: 3rem 0 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.card__desc1 {
+    color: var(--content-text-color);
+    padding: 0.5rem 0 0;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+/* --------card with images and content--------- */
+.card-img-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__imgHolder {
+    position: relative;
+    height: 15rem;
+    width: 85%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card__imgHolder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.card__imgHolder:hover .card__img {
+    transform: scale(1.1);
+}
+
+.card__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.card__content {
+    width: 100%;
+    padding: 2rem;
+}
+
+.card__title {
+    display: block;
+    color: var(--title-text-color);
+    font-weight: 700;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card__title:hover {
+    color: #272727;
+}
+
+.card-img-content-v {
+    display: block;
+    height: 35rem;
+    padding-bottom: 4rem;
+}
+
+.padding0 {
+    padding: 0;
+}
+
+/* ------ video----- */
+.you-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-out;
+}
+
+/* -----column----- */
+.column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+/* -------pointer ----------*/
+.pointer {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    background: url("./img/pointer.svg") center no-repeat;
+    background-position: 100%;
+}
+
+/* ------video player------ */
+.video-player {
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    width: 5rem;
+    z-index: 3;
+    transition: transform 0.4s ease-out;
+}
+
+/* ------date------ */
+.updated {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.date {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-text-color);
+}
+
+/* --------slider-arrow----------- */
+.prev,
+.next {
+    display: inline-block;
+    height: 7rem;
+    width: 7rem;
+    margin-left: -3rem;
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.next {
+    margin-right: -3rem;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(185, 170, 83, 0.6);
+}
+
+.prev:hover .arrow,
+.next:hover .arrow {
+    color: #fff;
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 2rem;
+    color: #969696;
+    margin-top: 2.4rem;
+}
+
+.prev__arrow {
+    margin-left: 2rem;
+}
+
+.next__arrow {
+    margin-right: 2rem;
+}
+
+/*----- close------ */
+.close {
+    display: inline-block;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    font-weight: 700;
+    color: rgb(221, 220, 220);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: rgb(160, 6, 6);
+}
+
+/* ------updated date----- */
+.updated-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.updated-wrapper>* {
+    margin-right: 2rem;
+}
+
+.main-header {
+    background: url("./img/radio-wave.svg") center no-repeat;
+}
+
+.main-header__content {
+    background: url("./img/landing3.svg") center no-repeat;
+}
+
+@media only screen and (min-width: 1400px) {
+    .page-wraper {
+        margin: 0 10rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+
+    .page-wraper {
+        margin: 0 3.5rem;
+    }
+
+    .main-side {
+        width: 70%;
+    }
+
+    .right-side {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    html {
+        font-size: 58%;
+    }
+
+    .main-header__content {
+        background: url("./img/landing-design5.svg") bottom no-repeat;
+    }
+
+    .page-wraper {
+        margin: 0 2.5rem;
+    }
+
+    .main-side {
+        width: 68%;
+    }
+
+    .right-side {
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 55%;
+    }
+
+    .page-wraper {
+        margin: 0 2rem;
+    }
+
+    .card {
+        margin-bottom: 3rem !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 53%;
+    }
+
+    .page-wraper {
+        margin: 0 3rem;
+    }
+
+    main {
+        display: block;
+    }
+
+    .main-side {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 52%;
+    }
+
+    .page-wraper {
+        margin: 0 3rem;
+    }
+}
+
+.footer {
+    background: url("./img/wave.png") center center no-repeat;
+}
